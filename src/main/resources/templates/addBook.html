@@ -121,10 +121,12 @@
 
 					<!-- isbn -->
 					<div class="form-group">
-						<label class="col-md-2 control-label" for="isbn">ISBN</label> <input
-							type="text" name="isbn" class="form-control" id="isbn"
-							placeholder="ISBN" th:value="${book.isbn}" /> <span
-							class="help-block">ISBN of the book</span>
+						<label class="col-md-2 control-label" for="isbn">ISBN</label>
+						<div class="col-md-8">
+							<input type="text" name="isbn" class="form-control" id="isbn"
+								placeholder="ISBN" th:value="${book.isbn}" /> <span
+								class="help-block">ISBN of the book</span>
+						</div>
 					</div>
 
 					<!-- shipping weight -->
