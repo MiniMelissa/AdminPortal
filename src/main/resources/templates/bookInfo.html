@@ -17,7 +17,7 @@
 			<div class="col-xs-3">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<img th:src="@{/image/book/}+${book.id}+'.png'" class="img-responsive" />
+						<img th:src="@{/image/book/}+${book.id}+'.png'" class="img-responsive center-block" />
 					</div>
 				</div>
 			</div>
@@ -42,7 +42,7 @@
 						<p><strong>Number in Stock: </strong><span th:text="${book.inStockNumber}"></span></p>
 					</div>		
 				</div>
-				<p><strong>Description: </strong><span th:text="${book.description}"></span></p>				
+				<p><strong>Description: </strong><span th:utext="${book.description}"></span></p>				
 			</div>
 		</div>
 	</div>

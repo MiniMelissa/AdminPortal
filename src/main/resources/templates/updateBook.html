@@ -14,6 +14,8 @@
 						Update Book Information<span style="font-size: small"> * is a
 							required filed.</span>
 					</legend>
+					
+					<input hidden="hidden" name="id" th:value="${book.id}" />
 
 					<!-- title -->
 					<div class="form-group">
@@ -136,7 +138,7 @@
 						<div class="col-md-8">
 							<div class="input-group">
 								<input type="number" class="form-control" id="shippingWeight"
-									name="shippingWeight" placeholder="Shipping Weight"
+									name="shippingWeight" placeholder="Shipping Weight" step="0.01"
 									th:value="${book.shippingWeight}" /> <span
 									class="input-group-addon">Ounces</span>
 							</div>
@@ -151,7 +153,7 @@
 						<div class="col-md-8">
 							<div class="input-group">
 								<span class="input-group-addon">$</span> <input type="number"
-									class="form-control" id="listPrice" name="listPrice"
+									class="form-control" id="listPrice" name="listPrice" step="0.01"
 									placeholder="List Price" th:value="${book.listPrice}" />
 							</div>
 							<span class="help-block">List price of the book</span>
@@ -165,7 +167,7 @@
 						<div class="col-md-8">
 							<div class="input-group">
 								<span class="input-group-addon">$</span> <input type="number"
-									class="form-control" id="ourPrice" name="ourPrice"
+									class="form-control" id="ourPrice" name="ourPrice" step="0.01"
 									placeholder="Our Price" th:value="${book.ourPrice}" />
 							</div>
 							<span class="help-block">Our price of the book</span>
