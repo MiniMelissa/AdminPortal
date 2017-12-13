@@ -1,6 +1,7 @@
 package com.xumeng.adminportal.controller;
 
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -45,7 +46,7 @@ public class BookController {
 			byte[] bytes = bookImage.getBytes();
 			String name = book.getId() + ".png";
 			BufferedOutputStream stream = new BufferedOutputStream(
-					new FileOutputStream("src/main/resources/static/image/book/" + name));
+					new FileOutputStream(new File("src/main/resources/static/image/book/") + name));
 			stream.write(bytes);
 			stream.close();
 
